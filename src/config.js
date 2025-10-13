@@ -113,5 +113,16 @@ export const projectCardImages = [
 */
 export const formspreeUrl = "https://formspree.io/f/xanplnla";
 
+/* Telegram Bot
+ ************************************************************** 
+  Add your Telegram bot token and chat ID below.
+  To create a bot: https://t.me/BotFather
+  To get chat ID: https://t.me/userinfobot
+*/
+
+// https://api.telegram.org/bot8116656227:AAESYkjHaXkJ00ovqj8M1yaPrGgGU7Pu_68/sendmessage?chat_id=-4896397563&text=Удачно!
+export const telegramBotToken = "8116656227:AAESYkjHaXkJ00ovqj8M1yaPrGgGU7Pu_68"; // "YOUR_BOT_TOKEN"
+export const telegramChatId = "-4896397563"; // "YOUR_CHAT_ID"
+
 // Footer icons theme (light or dark)
 export const footerTheme = "dark";

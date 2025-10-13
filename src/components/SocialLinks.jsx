@@ -41,7 +41,16 @@ const SocialLinks = () => {
       {isSuccess &&
         socialsData.map((element, index) => {
           let icon;
-          switch (element.provider) {
+          
+          // normalize provider if GitHub returns generic but URL hints real provider
+          const url = element.url || "";
+          let provider = (element.provider || "").toLowerCase();
+          if (provider === "generic") {
+            if (/udemy\.com/i.test(url)) provider = "udemy";
+            else if (/(^https?:\/\/)?(t\.me|telegram\.org)\//i.test(url)) provider = "telegram";
+          }
+
+          switch (provider) {
             case "linkedin":
               icon = <Icon icon="fa-brands:linkedin" />;
               break;
@@ -56,6 +65,18 @@ const SocialLinks = () => {
               break;
             case "tiktok":
               icon = <Icon icon="fa-brands:tiktok" />;
+              break;
+            case "udemy":
+              icon = (
+                <img 
+                  src="/icons/udemy96px.png" 
+                  alt="Udemy" 
+                  style={{ width: '38px', height: '38px' }}
+                />
+              );
+              break;
+            case "telegram":
+              icon = <Icon icon="fa6-brands:telegram" />;
               break;
 
             default:

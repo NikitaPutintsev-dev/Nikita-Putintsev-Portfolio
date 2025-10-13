@@ -1,6 +1,10 @@
 {
   "name": "github-react-portfolio-template",
+<<<<<<< Updated upstream
   "homepage": "https://NikitaPutintsev-dev.github.io/about/",
+=======
+  "homepage": "https://off-place.ru",
+>>>>>>> Stashed changes
   "version": "1.0.4",
   "private": false,
   "dependencies": {

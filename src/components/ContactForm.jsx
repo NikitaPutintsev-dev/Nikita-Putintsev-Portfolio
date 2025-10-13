@@ -7,9 +7,9 @@ import { selectMode } from "../app/appSlice";
 // Components
 import { Alert, Button, Form, Spinner } from "react-bootstrap";
 // Config
-import { formspreeUrl } from "../config";
+import { formspreeUrl, telegramBotToken, telegramChatId } from "../config";
 // Util
-import { postData } from "../utils";
+import { postData, sendToTelegram } from "../utils";
 
 // #region styled-components
 const StyledForm = styled.div`
@@ -52,10 +52,36 @@ const ContactForm = () => {
       event.persist();
       setIsProcessing(true);
       try {
-        const response = await postData(formspreeUrl, data);
-        if (!response.ok) {
-          throw new Error(`${response.status}: check formspreeUrl in data.js`);
+        // Отправка в Formspree
+        let formspreeSuccess = true;
+        if (formspreeUrl) {
+          const formspreeResponse = await postData(formspreeUrl, data);
+          if (!formspreeResponse.ok) {
+            console.warn(`Formspree error: ${formspreeResponse.status}`);
+            formspreeSuccess = false;
+          }
         }
+
+        // Отправка в Telegram
+        let telegramSuccess = true;
+        if (telegramBotToken && telegramChatId) {
+          try {
+            const telegramResponse = await sendToTelegram(telegramBotToken, telegramChatId, data);
+            if (!telegramResponse.ok) {
+              console.warn(`Telegram error: ${telegramResponse.status}`);
+              telegramSuccess = false;
+            }
+          } catch (telegramError) {
+            console.warn('Telegram send failed:', telegramError);
+            telegramSuccess = false;
+          }
+        }
+
+        // Если хотя бы один способ сработал, считаем успехом
+        if (!formspreeSuccess && !telegramSuccess) {
+          throw new Error('Ошибка отправки сообщения. Проверьте настройки Formspree и Telegram.');
+        }
+
         setIsProcessing(false);
         setIsValidated(false);
         event.target.reset();
@@ -129,9 +155,9 @@ const ContactForm = () => {
           >
             <Alert.Heading>{dangerMessage}</Alert.Heading>
           </Alert>
-          <Alert show={!formspreeUrl} variant="danger">
+          <Alert show={!formspreeUrl && !telegramBotToken} variant="warning">
             <Alert.Heading>
-              You must provide a valid formspree url in src/config.js
+              Настройте отправку сообщений: добавьте formspreeUrl или telegramBotToken в src/config.js
             </Alert.Heading>
           </Alert>
         </Form.Group>
