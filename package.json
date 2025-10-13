@@ -1,8 +1,8 @@
 {
   "name": "github-react-portfolio-template",
-  "homepage": "off-place.ru",
+  "homepage": "https://NikitaPutintsev-dev.github.io/about/",
   "version": "1.0.4",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@iconify/react": "^4.1.0",
     "@reduxjs/toolkit": "^2.5.0",
