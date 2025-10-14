@@ -38,3 +38,21 @@ export const postData = async (url, data) => {
   });
   return response;
 };
+
+// Telegram Bot
+export const sendToTelegram = async (botToken, chatId, data) => {
+  const message = `📧 Новое сообщение с сайта!\n\n👤 Имя: ${data.name}\n📧 Email: ${data.email}\n💬 Сообщение: ${data.message}`;
+  
+  const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      chat_id: chatId,
+      text: message,
+      parse_mode: "HTML"
+    }),
+  });
+  return response;
+};
