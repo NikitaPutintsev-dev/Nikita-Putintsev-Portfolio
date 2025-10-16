@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 // Icons
 import { Icon } from "@iconify/react";
 // Images
-import Logo from "../images/traditional-hungarian.svg";
+import Logo from "../images/logo.svg";
 import { Light, Dark, displayName } from "../config";
 // Components
 import { useErrorBoundary } from "react-error-boundary";

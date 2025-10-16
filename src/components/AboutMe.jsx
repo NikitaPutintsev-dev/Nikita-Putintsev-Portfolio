@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 import { Element } from "react-scroll";
 import { Col, Container, Row } from "react-bootstrap";
 import Title from "./Title";
+import { mainInfo } from "../config";
 
 // #region styled-components
 const StyledAboutMe = styled.section`
@@ -36,20 +37,23 @@ const AboutMe = ({ avatar_url, bio, moreInfo }) => {
             <Title size={"h2"} text={"Обо мне"} />
           </Container>
           <Row className="align-items-center mt-5">
-            <Col className="d-flex flex-column text-center">
+            <Col className="d-flex flex-column text-left">
               <Container>
-                {bio && <p>{bio}</p>}
+                {mainInfo && <p>{mainInfo}</p>}
                 {moreInfo && <p>{moreInfo}</p>}
               </Container>
             </Col>
             <Col className="d-none d-md-block text-center">
-              <img
-                src={avatar_url}
-                alt="GitHub Avatar"
-                loading="lazy"
-                className="mx-auto rounded-circle border border-primary-subtle"
-                style={{ width: "15rem", height: "15rem" }}
-              />
+              <Container>
+                <img
+                  src={avatar_url}
+                  alt="GitHub Avatar"
+                  loading="lazy"
+                  className="mx-auto rounded-circle border border-primary-subtle"
+                  style={{ width: "15rem", height: "15rem" }}
+                />
+                {bio && <p className="mt-3">{bio}</p>}
+              </Container>
             </Col>
           </Row>
         </Container>
