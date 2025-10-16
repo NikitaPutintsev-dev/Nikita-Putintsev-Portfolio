@@ -19,7 +19,7 @@ const Contact = () => {
     <Element name={"Contact"} id="contact">
       <StyledSection className="d-flex flex-column justify-content-center">
         <Container className="d-flex justify-content-center">
-          <Title size={"h2"} text={"Contact"} />
+          <Title size={"h2"} text={"Связь со мной"} />
         </Container>
         <Container>
           <ContactForm />

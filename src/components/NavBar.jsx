@@ -20,11 +20,11 @@ const navLinks = {
     { id: "2R", name: "All Projects", route: "/All-Projects" },
   ],
   to: [
-    { id: "1T", name: "Home", to: "Home" },
-    { id: "2T", name: "About Me", to: "About" },
-    { id: "3T", name: "Skills", to: "Skills" },
-    { id: "4T", name: "Projects", to: "Projects" },
-    { id: "5T", name: "Contact", to: "Contact" },
+    { id: "1T", name: "Главная", to: "Home" },
+    { id: "2T", name: "Обо мне", to: "About" },
+    { id: "3T", name: "Навыки", to: "Skills" },
+    { id: "4T", name: "Проекты", to: "Projects" },
+    { id: "5T", name: "Контакты", to: "Contact" },
   ],
 };
 // #endregion

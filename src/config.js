@@ -17,6 +17,9 @@ import Logo from "./images/logo.svg";
 */
 export const githubUsername = "NikitaPutintsev-dev";
 
+// Custom display name (will override GitHub name)
+export const displayName = "Никита Путинцев";
+
 // Navbar Logo image
 export const navLogo = null;
 
@@ -74,19 +77,19 @@ export const skillData = [
   },
   {
     id: 7,
-    skill: <Icon icon="akar-icons:redux-fill" className="display-4" />,
-    name: "Redux",
-  },
-  {
-    id: 8,
     skill: <Icon icon="bi:git" className="display-4" />,
     name: "Git",
   },
   {
-    id: 9,
+    id: 8,
     skill: <Icon icon="fa6-brands:square-github" className="display-4" />,
     name: "GitHub",
   },
+  {
+    id: 9,
+    skill: <Icon icon="fa6-brands:square-github" className="display-4" />,
+    name: "Unity",
+  }
 ];
 
 // Resume link (string - "https://YourResumeUrl") - I am using CloudFront to share my resume (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)

@@ -18,7 +18,7 @@ const Skills = () => {
       <section className="section">
         <Container className="text-center">
           <Container className="d-flex justify-content-center">
-            <Title size={"h2"} text={"Skills"} />
+            <Title size={"h2"} text={"Навыки"} />
           </Container>
           <Row className="mt-3 align-items-center">
             {skillData.map((skills) => {

@@ -39,7 +39,7 @@ a:hover {
 }
 
 .title {
-  font-family: "Permanent Marker";
+  font-family: "Ruslan Display", cursive;
 }
 
 .link-icons {
@@ -47,12 +47,17 @@ a:hover {
   font-size: 2.25rem;
   margin: 0 1rem;
   color: ${({ theme }) =>
-    theme.name === "light" ? "var(--bs-dark)" : "var(--bs-light)"};
+    theme.name === "light" 
+      ? "var(--bs-dark)" 
+      : "var(--bs-light)"};
 
   &:hover {
     color: ${({ theme }) =>
-      theme.name === "light" ? "var(--bs-light)" : "var(--bs-dark)"};
+      theme.name === "light" 
+        ? "var(--bs-light)" 
+        : "var(--bs-dark)"};
   }
+
 }
 
 .page-item.active .page-link {

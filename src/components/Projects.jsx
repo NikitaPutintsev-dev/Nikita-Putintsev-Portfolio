@@ -85,7 +85,7 @@ const Projects = () => {
       <section className="section">
         <Container>
           <Container className="d-flex justify-content-center">
-            <Title size={"h2"} text={"Projects"} />
+            <Title size={"h2"} text={"Проекты"} />
           </Container>
           {content}
         </Container>

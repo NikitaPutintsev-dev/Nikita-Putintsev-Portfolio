@@ -6,8 +6,8 @@ import PropTypes from "prop-types";
 // Icons
 import { Icon } from "@iconify/react";
 // Images
-import Logo from "../images/logo.svg";
-import { Light, Dark } from "../config";
+import Logo from "../images/traditional-hungarian.svg";
+import { Light, Dark, displayName } from "../config";
 // Components
 import { useErrorBoundary } from "react-error-boundary";
 import { Link } from "react-scroll";
@@ -107,7 +107,7 @@ const Hero = ({ name }) => {
         <Row className="align-items-center text-center">
           <Col>
             <h1 className="mb-3 display-3 title">
-              {name === null ? "null" : name}
+              {displayName || (name === null ? "null" : name)}
             </h1>
             <div className="d-flex align-items-center justify-content-center">
               <SocialLinks />
