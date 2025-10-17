@@ -16,7 +16,6 @@ import Logo from "./images/logo.svg";
   Add your GitHub username (string - "YourUsername") below.
 */
 export const githubUsername = "NikitaPutintsev-dev";
-
 // Custom display name (will override GitHub name)
 export const displayName = "Никита Путинцев";
 
@@ -96,7 +95,7 @@ export const skillData = [
       <svg width="49" height="49" viewBox="0 0 49 49" xmlns="http://www.w3.org/2000/svg" className="display-4" >
       <path fill="currentColor" d="M41.6504 0C45.7094 0.00021027 48.9998 3.29063 49 7.34961V41.6504C48.9998 45.7094 45.7094 48.9998 41.6504 49H7.34961C3.29063 48.9998 0.000210274 45.7094 0 41.6504V7.34961C0.000211301 3.29063 3.29063 0.000211304 7.34961 0H41.6504ZM30.2422 17.8008V28.3281C30.2422 33.0176 29.9551 34.7402 29.1895 36.2715C28.5195 37.707 27.3711 38.7598 24.9785 39.8125L29.9551 42.2051C32.3477 40.9609 33.4961 39.9082 34.3574 38.1855C35.3145 36.4629 35.6016 34.4531 35.6016 30.1465V17.8008H30.2422ZM21.7246 9.66602V17.7051C20.8633 17.5137 20.1934 17.5137 19.332 17.5137C13.6855 17.5137 10.1445 20.959 10.1445 26.4141C10.1445 32.0605 13.4941 35.0273 20.0977 35.0273C22.2988 35.0273 24.3086 34.7402 27.084 34.2617V9.66602H21.7246ZM19.9062 21.7246C20.5762 21.7246 21.0547 21.8203 21.7246 22.0117V30.5293C20.8633 30.7207 20.3848 30.7207 19.8105 30.7207C17.0352 30.7207 15.5996 29.1895 15.5996 26.3184C15.5996 23.4473 17.1309 21.7246 19.9062 21.7246ZM30.2422 9.66602V15.1211H35.6016V9.66602H30.2422Z"/>
       </svg>,
-    name: "Django",
+    name: "Django + DRF",
   },
   {
     id: 7,
@@ -155,7 +154,14 @@ export const resume = null;
  ************************************************************** 
   List the repo names (string - "your-repo-name") you want to include (they will be sorted alphabetically). If empty, only the first 3 will be included.
 */
-export const filteredProjects = ["example-1", "example-2", "example-3"];
+
+// export const filteredProjects = ["example-1", "example-2", "example-3"];
+
+const excludedProjects = ["example-2", "test-project"];
+
+export const filteredProjects = ["example-1", "example-2", "example-3"].filter(
+  (name) => !excludedProjects.includes(name)
+);
 
 // Replace the defualt GitHub image for matching repos below (images imported above - lines 7-8)
 export const projectCardImages = [
