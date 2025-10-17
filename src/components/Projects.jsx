@@ -30,6 +30,12 @@ const Projects = () => {
       </Container>
     );
   } else if (isSuccess) {
+
+    const excludedNames = ["nikita-putintsev-portfolio", "other project names"];
+    const safeMainProjects = mainProjects.filter(
+      (p) => !excludedNames.some((n) => p.name.toLowerCase().includes(n))
+    );
+
     content = (
       <>
         {!error && projects.length === 0 && (
@@ -40,7 +46,13 @@ const Projects = () => {
         {mainProjects.length !== 0 && (
           <>
             <Row xs={1} md={2} lg={3} className="g-4 justify-content-center">
-              {mainProjects.map((element) => {
+              {/* {mainProjects.filter(
+                  (element) =>
+                    !["Nikita-Putintsev-Portfolio", "other project names"].includes(
+                      element.name.toLowerCase()
+                    ) */}
+                {/* ).map((element) => { */}
+                {safeMainProjects.map((element) => {
                 return (
                   <Col key={element.id}>
                     <ProjectCard
