@@ -5,11 +5,13 @@ import { useGetUsersQuery } from "../app/apiSlice";
 import Hero from "../components/Hero";
 import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
-import Projects from "../components/Projects";
+// import Projects from "../components/Projects";
+import Keyses from "../components/Keyses";
 import Contact from "../components/Contact";
 import BackToTop from "../components/BackToTop";
 // Config
-import { filteredProjects, moreInfo, displayName } from "../config";
+import { moreInfo, displayName } from "../config";
+// import { filteredProjects, moreInfo, displayName } from "../config";
 // Utils
 import { updateTitle } from "../utils";
 
@@ -31,7 +33,8 @@ const Home = () => {
           moreInfo={moreInfo}
         />
         <Skills />
-        <Projects filteredProjects={filteredProjects} />
+        {/* <Projects filteredProjects={filteredProjects} /> */}
+        <Keyses />
         <Contact />
       </main>
       <BackToTop />
