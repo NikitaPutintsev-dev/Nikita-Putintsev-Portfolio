@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a7b64d51.css",
-    "main.js": "/static/js/main.115ae245.js",
+    "main.js": "/static/js/main.93f9381a.js",
     "static/media/Dedoslavl.png": "/static/media/Dedoslavl.68c0c3d3cd6dc037eefa.png",
     "static/media/kurgan.png": "/static/media/kurgan.22b7f1e16caac37d206a.png",
     "static/media/T1_2.png": "/static/media/T1_2.2e8a20f527587c08eb04.png",
@@ -9,18 +9,23 @@
     "static/media/rosneft.png": "/static/media/rosneft.26646b4760b77f7dbd98.png",
     "static/media/KvizPython.jpg": "/static/media/KvizPython.02a767eea085f1c1299d.jpg",
     "static/media/hero-dark.jpg": "/static/media/hero-dark.b2104785a144576554a1.jpg",
+    "static/media/agro.jpg": "/static/media/agro.afd5f0a3f0245ae91dcd.jpg",
     "static/media/hero-light.jpg": "/static/media/hero-light.78b77836d8aee4d7d3cb.jpg",
     "static/media/pech.jpg": "/static/media/pech.56da5f7c262b5e53281a.jpg",
+    "static/media/MoscowMap.jpg": "/static/media/MoscowMap.9c522d92742820a91c86.jpg",
+    "static/media/ai-assist.jpg": "/static/media/ai-assist.f8823263e7e183b2734b.jpg",
+    "static/media/reactor.jpg": "/static/media/reactor.5ee67a829238d8e5296f.jpg",
+    "static/media/basket.jpg": "/static/media/basket.0b4b7e56225cf5d27c6c.jpg",
     "service-worker.js": "/service-worker.js",
     "static/media/GH.svg": "/static/media/GH.b9e9a9aa6f05e9dfe5dcb8991bda3e4d.svg",
     "static/media/defaultNavLogo.svg": "/static/media/defaultNavLogo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.a7b64d51.css.map": "/static/css/main.a7b64d51.css.map",
-    "main.115ae245.js.map": "/static/js/main.115ae245.js.map"
+    "main.93f9381a.js.map": "/static/js/main.93f9381a.js.map"
   },
   "entrypoints": [
     "static/css/main.a7b64d51.css",
-    "static/js/main.115ae245.js"
+    "static/js/main.93f9381a.js"
   ]
 }
